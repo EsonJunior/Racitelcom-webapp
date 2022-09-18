@@ -13,16 +13,6 @@ class Socal extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        if (!Responsive.isMobile(context))
-          SvgPicture.asset("assets/icons/behance-alt.svg"),
-        if (!Responsive.isMobile(context))
-          Padding(
-            padding:
-                const EdgeInsets.symmetric(horizontal: kDefaultPadding / 2),
-            child: SvgPicture.asset("assets/icons/feather_dribbble.svg"),
-          ),
-        if (!Responsive.isMobile(context))
-          SvgPicture.asset("assets/icons/feather_twitter.svg"),
         SizedBox(width: kDefaultPadding),
         ElevatedButton(
           onPressed: () {},
@@ -33,7 +23,7 @@ class Socal extends StatelessWidget {
                   kDefaultPadding / (Responsive.isDesktop(context) ? 1 : 2),
             ),
           ),
-          child: Text("Let's Talk"),
+          child: Text("Account"),
         ),
       ],
     );

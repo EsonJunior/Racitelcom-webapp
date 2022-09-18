@@ -36,7 +36,14 @@ class Header extends StatelessWidget {
                             _controller.openOrCloseDrawer();
                           },
                         ),
-                      SvgPicture.asset("assets/icons/logo.svg"),
+                      Container(
+                        height: 26,
+                        width: 120,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/icons/logo.png"),
+                                fit: BoxFit.fill)),
+                      ),
                       Spacer(),
                       if (Responsive.isDesktop(context)) WebMenu(),
                       Spacer(),
@@ -46,7 +53,7 @@ class Header extends StatelessWidget {
                   ),
                   SizedBox(height: kDefaultPadding * 2),
                   Text(
-                    "Welcome to Our Blog",
+                    "Welcome to Racitelcom",
                     style: TextStyle(
                       fontSize: 32,
                       color: Colors.white,
@@ -57,7 +64,7 @@ class Header extends StatelessWidget {
                     padding:
                         const EdgeInsets.symmetric(vertical: kDefaultPadding),
                     child: Text(
-                      "Stay updated with the newest design and development stories, case studies, \nand insights shared by DesignDK Team.",
+                      "Connects you to the future...",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colors.white,
